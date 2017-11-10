@@ -4,10 +4,10 @@
 using namespace std;
 
 int main(){
-	int count = 0;
+	/*int count = 0;
 	int paths = 0;
-	string unique[1000000];
-	for(int i = 0; i < 1000000; i++){
+	string unique[100000];
+	for(int i = 0; i < 100000; i++){
 		unique[i] = "";
 	}
 	while(count < 1000000){
@@ -37,6 +37,14 @@ int main(){
 			paths++;
 		}
 		count++;
+	}
+	cout<<paths<<endl;*/
+	int gridSize = 20;
+	long paths = 1;
+
+	for (int i = 0; i < gridSize; i++) {
+	    paths *= (2 * gridSize) - i;
+	    paths /= i + 1;
 	}
 	cout<<paths<<endl;
 	return 0;
