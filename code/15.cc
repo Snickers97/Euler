@@ -39,8 +39,9 @@ int main(){
 		count++;
 	}
 	cout<<paths<<endl;*/
-	int gridSize = 20;
-	long paths = 1;
+	int gridSize;
+	cin>>gridSize;
+	unsigned long paths = 1;
 
 	for (int i = 0; i < gridSize; i++) {
 	    paths *= (2 * gridSize) - i;
